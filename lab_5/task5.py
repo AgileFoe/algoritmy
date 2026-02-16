@@ -8,7 +8,7 @@ if len(numbers) > 2:
         if i > first:
             first = i
 
-    numbers.remove(x)
+    numbers.remove(first)
     for i in numbers:
         if i > second:
              second = i 
