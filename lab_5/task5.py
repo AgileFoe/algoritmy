@@ -1,11 +1,12 @@
 numbers = [42, 7, 89, 13, 56]
+first = 0
 second = 0
-x = 0
+
 
 if len(numbers) > 2:
     for i in numbers:
-        if i > x:
-            x = i
+        if i > first:
+            first = i
 
     numbers.remove(x)
     for i in numbers:
