@@ -42,3 +42,36 @@ def sum_digits(n):
 
 print(f"\n{sum_digits(255)}")
 # 7)
+def is_palindrome(text):
+    text = text.replace(" ", "").lower()
+    if len(text) <= 1:
+        return True
+    if text[0] == text[-1]:
+        return is_palindrome(text[1:-1])
+    else:
+        return False
+#8)
+def max_element(arr, index=0):
+    if index == len(arr) - 1:
+        return arr[index]
+    
+    current_max = max_element(arr, index + 1)
+    
+    if arr[index] > current_max:
+        return arr[index]
+    else:
+        return current_max
+#9)
+def power(a, n):
+    if n == 0:
+        return 1
+    elif n % 2 == 0:
+        half = power(a, n // 2)
+        return half * half
+    else:
+        return a * power(a, n - 1)
+#10)
+def count_depth(n, depth=0):
+    if n == 0:
+        return depth
+    return count_depth(n - 1, depth + 1)
