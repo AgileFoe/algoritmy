@@ -14,7 +14,7 @@ if len(numbers) > 2:
              second = i 
     
 else:
-    print("список должен исеть больше 2-х значений")
+    print("список должен иметь больше 2-х значений")
 
 
 print(second)
